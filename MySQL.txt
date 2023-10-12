@@ -1,0 +1,41 @@
+-- Create the Vol table
+CREATE TABLE Vol (
+    id serial PRIMARY KEY,
+    ville_depart VARCHAR(255),
+    ville_arriver VARCHAR(255),
+    nbr_place INT,
+    heure_depart TIME,
+    heure_arriver TIME,
+    date_depart DATE,
+    date_arriver DATE,
+    tarif DECIMAL(10, 2)
+);
+
+-- Create the Responsable table
+CREATE TABLE Responsable (
+    id serial PRIMARY KEY,
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+-- Create the Reservation table
+CREATE TABLE Reservation (
+    id serial PRIMARY KEY,
+    payment DECIMAL(10, 2)
+);
+
+-- Create the Extra table
+CREATE TABLE Extra (
+    id serial PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+-- Create the Client table
+CREATE TABLE Client (
+    code serial PRIMARY KEY,
+    nom VARCHAR(255),
+    prenom VARCHAR(255),
+    email VARCHAR(255),
+    telephone VARCHAR(20),
+    password VARCHAR(255)
+);
